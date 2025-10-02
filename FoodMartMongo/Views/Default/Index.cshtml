@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_NavbarComponentPartial")
+
+    @await Component.InvokeAsync("_SliderComponentPartial")
+
+    @await Component.InvokeAsync("_CategoryComponentPartial")
+
+    @await Component.InvokeAsync("_TrendProductsComponentPartial")
+
+    @await Component.InvokeAsync("_LastDiscountComponentPartial")
+
+    @await Component.InvokeAsync("_BestSellingComponentView")
+
+    @await Component.InvokeAsync("_MailComponentPartial")
+
+    @await Component.InvokeAsync("_FooterComponentPartial")
+
+</body>
+</html>

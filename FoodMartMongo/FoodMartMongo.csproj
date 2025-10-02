@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\volt-react-dashboard-1.0.0\.DS_Store" />
+    <None Include="wwwroot\volt-react-dashboard-1.0.0\src\.DS_Store" />
+    <None Include="wwwroot\volt-react-dashboard-1.0.0\src\assets\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
     <PackageReference Include="MongoDB.Bson" Version="3.4.3" />
     <PackageReference Include="MongoDB.Driver" Version="3.4.3" />

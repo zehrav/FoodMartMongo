@@ -1,0 +1,28 @@
+﻿@model FoodMartMongo.Dtos.SliderDtos.UpdateSliderDto
+@{
+    Layout = "_AdminLayout";  // Admin layout kullanıyoruz
+}
+
+<h2>Slider Düzenle</h2>
+
+<form asp-action="UpdateSlider" method="post">
+    <input type="hidden" asp-for="SliderId" />
+
+    <div class="mb-3">
+        <label>Başlık</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Alt Başlık</label>
+        <input asp-for="Subtitle" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Açıklama</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label>Resim URL</label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-warning">Güncelle</button>
+</form>

@@ -1,0 +1,28 @@
+﻿@model List<FoodMartMongo.Dtos.DiscountDtos.ResultDiscountDto>
+<style>
+    .banner-blocks {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(300px, auto); /* Satır yüksekliği esnek */
+        gap: 30px; /* Satırlar arası boşluk */
+    }
+
+    
+</style>
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    var blockClass = "block-" + (i + 2); // block-2, block-3, block-4...
+    <div class="banner-ad @blockClass" style="background:url('@Model[i].ImageUrl') no-repeat right bottom;">
+        <div class="row banner-content p-5">
+            <div class="content-wrapper col-md-7">
+                <div class="categories mb-3 pb-3">@Model[i].Subtitle</div>
+                <h3 class="banner-title">@Model[i].Title</h3>
+                <p>@Model[i].Description</p>
+                <a href="#" class="d-flex align-items-center nav-link">
+                    <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+}

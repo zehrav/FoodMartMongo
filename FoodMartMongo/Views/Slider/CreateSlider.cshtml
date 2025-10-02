@@ -1,0 +1,26 @@
+﻿@model FoodMartMongo.Dtos.SliderDtos.CreateSliderDto
+@{
+    Layout = "_AdminLayout";  // Admin layout kullanıyoruz
+}
+
+<h2>Yeni Slider Ekle</h2>
+
+<form asp-action="CreateSlider" method="post">
+    <div class="mb-3">
+        <label>Başlık</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Alt Başlık</label>
+        <input asp-for="Subtitle" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Açıklama</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label>Resim URL</label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

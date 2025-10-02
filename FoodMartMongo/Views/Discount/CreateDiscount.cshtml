@@ -1,0 +1,27 @@
+﻿@model FoodMartMongo.Dtos.DiscountDtos.CreateDiscountDto
+
+@{
+    ViewData["Title"] = "Yeni İndirim Ekle";
+}
+
+<h2>Yeni İndirim Ekle</h2>
+
+<form asp-action="CreateDiscount" method="post">
+    <div class="mb-3">
+        <label class="form-label">Başlık</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Alt Başlık</label>
+        <input asp-for="Subtitle" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Açıklama</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Görsel URL</label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>
